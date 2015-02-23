@@ -106,6 +106,7 @@ frappe.upload = {
 			var freader = new FileReader();
 
 			freader.onload = function() {
+				console.log("in the upload file");
 				args.filename = fileobj.name;
 				if((opts.max_width || opts.max_height) && (/\.(gif|jpg|jpeg|tiff|png)$/i).test(args.filename)) {
 					frappe.utils.resize_image(freader, function(_dataurl) {

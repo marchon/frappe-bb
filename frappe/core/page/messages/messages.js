@@ -47,8 +47,10 @@ frappe.core.pages.messages = Class.extend({
 	},
 	make_post_message: function() {
 		var me = this;
+		console.log("in the make_post_message ")
 
 		$('#post-message .btn').click(function() {
+			console.log("in the make_post_message ")
 			var txt = $('#post-message textarea').val();
 			if(txt) {
 				return frappe.call({
